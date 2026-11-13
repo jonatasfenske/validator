@@ -1,0 +1,44 @@
+{
+ "name": "jonatasfenske/validator",
+ "description": "Validação declarativa PHP 8.5 com 30+ rules, mensagens em português, regras customizáveis e integração com qualquer camada da aplicação",
+ "type": "library",
+ "license": "MIT",
+ "keywords": ["php85", "validation", "validator", "rules", "form-validation", "api-validation"],
+ "homepage": "https://github.com/jonatasfenske/validator",
+ "authors": [
+ {
+ "name": "Robson V. Leite",
+ "email": "cursos@upinside.com.br",
+ "role": "Original Author"
+ },
+ {
+ "name": "Jonatas Fenske",
+ "role": "PHP 8.5 Modernization"
+ }
+ ],
+ "require": {
+ "php": ">=8.5"
+ },
+ "require-dev": {
+ "phpunit/phpunit": "^12.0",
+ "phpstan/phpstan": "^2.0"
+ },
+ "autoload": {
+ "psr-4": {
+ "JonatasFenske\\Validator\\": "src/"
+ }
+ },
+ "autoload-dev": {
+ "psr-4": {
+ "JonatasFenske\\Validator\\Tests\\": "tests/"
+ }
+ },
+ "scripts": {
+ "test": "phpunit",
+ "analyse": "phpstan analyse src tests --level=max"
+ },
+ "config": {
+ "sort-packages": true
+ },
+ "minimum-stability": "stable"
+}
