@@ -19,7 +19,7 @@ use JsonException;
  *     'password' => 'required|confirmed|min:8',
  * ];
  */
-class Validator
+final class Validator
 {
  /** @var array<string, string|array<string>> Regras de validação */
  private array $rules = [];
@@ -30,7 +30,7 @@ class Validator
  /** @var array<string, array<string>> Erros encontrados */
  private array $errors = [];
 
- /** @var array<string, array<string, string>> Mensagens customizadas por campo e regra */
+ /** @var array<string, string> Mensagens customizadas por campo e regra */
  private array $customMessages = [];
 
  /** @var array<string, string> Labels customizados por campo */
@@ -247,7 +247,7 @@ class Validator
  * Registra rule customizada
  *
  * @param string $name Nome da regra (ex: 'cpf')
- * @param callable(array<string, mixed>, string, string): bool|string $callback
+ * @param callable(array<string, mixed>, string, string): (bool|string) $callback
  * Recebe ($data, $field, $param) e retorna true/false ou string de erro
  * @param string|null $messageTemplate Mensagem padrão com :attribute e :param
  */

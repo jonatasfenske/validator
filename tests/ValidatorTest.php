@@ -18,7 +18,6 @@ final class ValidatorTest extends TestCase
         // Limpa rules customizadas entre testes
         $reflection = new \ReflectionClass(Validator::class);
         $prop = $reflection->getProperty('customRules');
-        $prop->setAccessible(true);
         $prop->setValue(null, []);
     }
 
